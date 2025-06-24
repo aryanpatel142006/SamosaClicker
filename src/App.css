@@ -1,21 +1,24 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
+.samosa {
+  height: 15em;
   padding: 1.5em;
+  margin: 0 auto;
   will-change: filter;
   transition: filter 300ms;
+  text-align: center;
 }
-.logo:hover {
+/* .samosa:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+.samosa:hover {
+  filter: drop-shadow(0 0 2em #6c8127);
 }
 
 @keyframes logo-spin {
@@ -28,7 +31,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .samosa {
     animation: logo-spin infinite 20s linear;
   }
 }
@@ -39,4 +42,26 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.theme{
+  height: 2em ;
+  /* width: auto; */
+  display: flex;
+  flex-direction: row-reverse;
+  /* background-color: peachpuff; */
+  align-items: end;
+  gap: 1em;
+}
+
+.theme_icon {
+
+  height: 2em;
+
+}
+
+.theme h4 {
+  align-self: center;
+  font-weight:900;
+  color: #fbe8a9;
 }
