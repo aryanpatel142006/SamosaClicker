@@ -1,5 +1,8 @@
 import './App.css';
 import {use, useState} from 'react';
+import samosa from '/src/assets/samosa3.png'
+import them from '/src/assets/theme_icon.png'
+
 
 // This is the main component of the Samosa Selector application
 // It includes a header with a title, a count of samosas, and a theme changer
@@ -68,7 +71,7 @@ const App =() => {
       <div className="navbar">
         <div className="theme">
           {/* <img src="/src/assets/theme_icon.png" alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/> */}
-          <img src="/public/theme_icon.png" alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/>
+          <img src= {them} alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/>
          
           <h4>Change Theme</h4>
         </div>
@@ -79,7 +82,7 @@ const App =() => {
         <h2>Count: {count} </h2>
         
         {/* <img src="/src/assets/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/> */}
-        <img src="/public/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/>
+        <img src={samosa} alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/>
       </div>
       <div className="container">
         <div className="upgrade">
