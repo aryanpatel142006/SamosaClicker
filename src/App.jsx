@@ -67,7 +67,9 @@ const App =() => {
     <div className="App">
       <div className="navbar">
         <div className="theme">
-          <img src="/src/assets/theme_icon.png" alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/>
+          {/* <img src="/src/assets/theme_icon.png" alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/> */}
+          <img src="/public/theme_icon.png" alt="Change Theme" className='theme_icon' onClick={handleThemeChange}/>
+         
           <h4>Change Theme</h4>
         </div>
       </div>
@@ -76,7 +78,8 @@ const App =() => {
         <h1>Samosa Selector</h1>
         <h2>Count: {count} </h2>
         
-        <img src="/src/assets/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/>
+        {/* <img src="/src/assets/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/> */}
+        <img src="/public/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/>
       </div>
       <div className="container">
         <div className="upgrade">
