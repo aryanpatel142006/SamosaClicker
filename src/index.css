@@ -68,12 +68,3 @@ button:focus-visible {
 }
 
 
-.dark-theme{
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-}
-
-.light-theme{
-  color: #213547;
-  background-color: #ffffff;
-}

@@ -19,11 +19,48 @@ const App =() => {
 
   // Samosa Selector theme changer function
   const [count, setCount] = useState(0);
+
+  const [multiplier,setMultiplier] = useState(1);
   // State to manage the count of samosas
   const handleSamosaClick = () => {
-    setCount(count + 1);
+    setCount(count + multiplier);
     // Increment the count of samosas when the image is clicked
   };
+
+  // Samosa Prices
+
+  const [doubleStuffedPrice,setDoubleStuffedPrice] = useState(10)
+  
+  const [PartyPackPrice,setPartyPackPrice] = useState(100)
+
+  const [FullFeastPrice,setFullFeastPrice] = useState(1000)
+
+
+  // Handeling samosa upgrades
+
+  const buyDoubleStuffed = () => {
+  if (count >= doubleStuffedPrice) {
+    setMultiplier(multiplier * 2);
+    setCount(count - doubleStuffedPrice);
+    setDoubleStuffedPrice(doubleStuffedPrice * 2)
+  }
+  }
+
+  const buyPartyPack = () => {
+  if (count >= PartyPackPrice) {
+    setMultiplier(multiplier * 5);
+    setCount(count - PartyPackPrice);
+    setPartyPackPrice(PartyPackPrice*5)
+  }
+  }
+
+  const buyFullFeast = () => {
+  if (count >= FullFeastPrice) {
+    setMultiplier( multiplier * 10);
+    setCount(count - FullFeastPrice);
+    setFullFeastPrice(FullFeastPrice*10)
+  }
+  }
 
   return(
     
@@ -39,7 +76,26 @@ const App =() => {
         <h1>Samosa Selector</h1>
         <h2>Count: {count} </h2>
         
-        <img src="./src/assets/samosa3.png" alt="A Huge Samosa" className="samosa" onClick={handleSamosaClick}/>
+        <img src="./src/assets/samosa3.png" alt="A Huge Samosa" className={"samosa " + { theme }} onClick={handleSamosaClick}/>
+      </div>
+      <div className="container">
+        <div className="upgrade">
+          <h3>Double Stuffed 👯‍♀️</h3>
+          <p>2x per click</p>
+          <button onClick={buyDoubleStuffed} >{doubleStuffedPrice} samosas</button>
+        </div>
+
+        <div className="upgrade">
+          <h3>Party Pack 🎉</h3>
+          <p>5x per click</p>
+          <button onClick={buyPartyPack}>{PartyPackPrice} samosas</button>
+        </div>
+
+        <div className="upgrade">
+          <h3>Full Feast 👩🏽‍🍳	</h3>
+          <p>10x per click</p>
+          <button onClick={buyFullFeast} >{FullFeastPrice} samosas</button>
+        </div>
       </div>
     </div>
   )
